@@ -1,8 +1,3 @@
-<?php
-include("connection.php");
-error_reporting(0);
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -286,19 +281,3 @@ error_reporting(0);
 </body>
 
 </html>
-
-<?php
-
-$firstname=$_GET['email'];
-$lastname=$_GET['password'];
-
-$query="INSERT INTO LOGIN VALUES ('$email','$password')";
-$data=mysqli_query($conn,$query);
-
-if ($data) {
-    echo "DATA INSERTED INTO DATABASE";
-}
-else {
-    "Failed to insert into database";
-}
-?>
